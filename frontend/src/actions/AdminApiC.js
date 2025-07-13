@@ -3,7 +3,7 @@
 export const AdminLogin = async (isAdmin) => {
     
     try {
-        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/admin-route/admin-login`, {
+        const response = await fetch(`https://anuj-dai-blog-backend.onrender.com/admin-route/admin-login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -28,7 +28,7 @@ export const AdminLogin = async (isAdmin) => {
 
 export const AdminGetDashboardSummery=async()=>{
      try {
-        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/admin-route/admin-dashboard-stats`, {
+        const response = await fetch(`https://anuj-dai-blog-backend.onrender.com/admin-route/admin-dashboard-stats`, {
             method: 'GET',
             headers: {
                 'Authorization':`Bearer ${localStorage.getItem('token')}`,
@@ -51,7 +51,7 @@ export const AdminGetDashboardSummery=async()=>{
 
 export const AdminGetBlogsOverTimeLineChart=async()=>{
      try {
-        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/admin-route/get-blogs-overtime`, {
+        const response = await fetch(`https://anuj-dai-blog-backend.onrender.com/admin-route/get-blogs-overtime`, {
             method: 'GET',
             headers: {
                 'Authorization':`Bearer ${localStorage.getItem('token')}`,
@@ -74,7 +74,7 @@ export const AdminGetBlogsOverTimeLineChart=async()=>{
 
 export const AdminGetDunutChart=async()=>{
      try {
-        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/admin-route/get-bar-chart-data`, {
+        const response = await fetch(`https://anuj-dai-blog-backend.onrender.com/admin-route/get-bar-chart-data`, {
             method: 'GET',
             headers: {
                 'Authorization':`Bearer ${localStorage.getItem('token')}`,
