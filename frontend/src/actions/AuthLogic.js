@@ -6,7 +6,7 @@ export async function registerUser(formData) {
   const user = Object.fromEntries(formData.entries());
 
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/user-route/user-register`, {
+    const response = await fetch(`https://anuj-dai-blog-backend.onrender.com/user-route/user-register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -34,7 +34,7 @@ export async function LoginUser(formData) {
   const user = Object.fromEntries(formData.entries());
 
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/user-route/user-login`, {
+    const response = await fetch(`https://anuj-dai-blog-backend.onrender.com/user-route/user-login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -59,7 +59,7 @@ export async function LoginUser(formData) {
 
 export async function AuthUser(){
    try {
-     const response =await fetch(`${import.meta.env.VITE_API_BASE_URL}/user-route/auth-user-details`,{
+     const response =await fetch(`https://anuj-dai-blog-backend.onrender.com/user-route/auth-user-details`,{
       method:'GET',
       headers:{
         'Authorization':`Bearer ${localStorage.getItem('token')}`,
