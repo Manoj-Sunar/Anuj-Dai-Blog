@@ -40,7 +40,7 @@ function App() {
 
           
             {/* Admin Routes */}
-            <Route path='/admin-login-route' element={<AdminLoginPage/>}/>
+            <Route path={`https://anuj-dai-blog-frontend.onrender.com/admin-login-route`} element={<AdminLoginPage/>}/>
             <Route path='/admin' element={<AuthRouteProtected><AdminLayout/></AuthRouteProtected>}>
               <Route index element={<Dashboard/>}/>
               <Route path="admin-blog" element={<Blogs/>}/>
