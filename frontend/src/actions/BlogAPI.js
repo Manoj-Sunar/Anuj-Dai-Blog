@@ -6,7 +6,7 @@
 export async function CreateBlog(blogData) {
 
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blog/create-blog`, {
+    const response = await fetch(`https://anuj-dai-blog-backend.onrender.com/blog/create-blog`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ export async function CreateBlog(blogData) {
 // Get all blogs api calls
 export async function GetAllBlogs(query) {
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blog/get/all-blogs?${query}`, {
+    const response = await fetch(`https://anuj-dai-blog-backend.onrender.com/blog/get/all-blogs?${query}`, {
       method: 'GET',
     });
 
@@ -55,7 +55,7 @@ export async function GetAllBlogs(query) {
 //user can likes any blog
 export async function UserLikesBlogs(blogId) {
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blog/blog-like/${blogId}`, {
+    const response = await fetch(`https://anuj-dai-blog-backend.onrender.com/blog/blog-like/${blogId}`, {
       method: 'PUT',
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -77,7 +77,7 @@ export async function UserLikesBlogs(blogId) {
 //get blog like detail for only authorized user
 export async function GetBlogLikeDetails(blogId) {
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blog/blog-like-details/${blogId}`, {
+    const response = await fetch(`https://anuj-dai-blog-backend.onrender.com/blog/blog-like-details/${blogId}`, {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -100,7 +100,7 @@ export async function GetBlogLikeDetails(blogId) {
 
 export async function GetBlogLikeDetailsForAll(blogId) {
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blog/blog-like-details-all/${blogId}`, {
+    const response = await fetch(`https://anuj-dai-blog-backend.onrender.com/blog/blog-like-details-all/${blogId}`, {
       method: 'GET',
     });
 
@@ -121,7 +121,7 @@ export async function GetBlogLikeDetailsForAll(blogId) {
 export async function CommentTheBlogById({ blogId, comment }) {
 
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blog/blog-comment/${blogId}`, {
+    const response = await fetch(`https://anuj-dai-blog-backend.onrender.com/blog/blog-comment/${blogId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -147,7 +147,7 @@ export async function CommentTheBlogById({ blogId, comment }) {
 
 export async function getCommentsById(blogId) {
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blog/get-blog-comment/${blogId}`, {
+    const response = await fetch(`https://anuj-dai-blog-backend.onrender.com/blog/get-blog-comment/${blogId}`, {
       method: 'GET',
     });
 
@@ -168,7 +168,7 @@ export async function getCommentsById(blogId) {
 export async function CommentsDeleteById(blogId, commentId) {
 
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/blog/delete-comment/${blogId}/${commentId}`, {
+    const response = await fetch(`https://anuj-dai-blog-backend.onrender.com/blog/delete-comment/${blogId}/${commentId}`, {
       method: 'DELETE',
       headers: {
        'Authorization': `Bearer ${localStorage.getItem('token')}`,
