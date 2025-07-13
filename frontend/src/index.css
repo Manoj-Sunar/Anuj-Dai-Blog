@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 60.5%;
+}
+
+
+.ce-header {
+  font-weight: 700;
+  margin: 1rem 0;
+  color: #1f2937; /* Tailwind: text-gray-800 */
+}
+
+.ce-header[data-level="1"] {
+  font-size: 2rem; /* Tailwind: text-3xl */
+}
+
+.ce-header[data-level="2"] {
+  font-size: 1.5rem; /* Tailwind: text-2xl */
+}
+
+.ce-header[data-level="3"] {
+  font-size: 1.25rem; /* Tailwind: text-xl */
+}
+
+
+.cdx-input {
+  display: block !important;
+  font-size: 0.875rem; /* Tailwind: text-sm */
+  color: #374151; /* Tailwind: text-gray-700 */
+  margin-top: 4px;
+}
+
+
+.ce-block {
+  margin-bottom: 1rem;
+}
+
+.codex-editor__redactor {
+  padding-bottom: 100px !important;
+}
+
+
+
+
+
+
