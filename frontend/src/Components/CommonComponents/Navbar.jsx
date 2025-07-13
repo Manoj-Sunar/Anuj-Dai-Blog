@@ -32,14 +32,14 @@ const Navbar = () => {
     <div className=''>
 
 
-      <div className='flex justify-between flex-col gap-y-2 md:flex-row items-center py-5 md:px-20 px-4 bg-gray-100'>
+      <div className='flex justify-between flex-col gap-y-2 md:flex-row md:items-center py-5 md:px-20 px-4 bg-gray-100'>
         <div>
 
           <div>
             {/*  */}
           </div>
 
-          <div className=' border-2 border-gray-300 shadow-2xs rounded-full pr-2 px-2 flex justify-between items-center'>
+          <div className=' border-2 border-gray-300 shadow-2xs rounded-full pr-2 px-2 flex md:justify-between items-center'>
             <SearchIcon sx={{ padding: '2px', color: 'gray' }} />
             <input type="text" name='search' className='outline-none rounded-full py-2  px-1 text-xs text-gray-600' placeholder='search' value={searchInput} onChange={(e) => setSearch(e.target.value)} />
           </div>
