@@ -18,6 +18,7 @@ import PublicProtectedRoute from './ProtectedRoute/PublicProtectedRoute'
 import PageNotFound from './Pages/PageNotFound'
 import AuthRouteProtected from './ProtectedRoute/AuthRouteProtected'
 import Blogs from './AdminPages/pages/Blogs'
+import AdminProfile from './AdminPages/pages/AdminProfile'
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
             <Route path='/admin' element={<AuthRouteProtected><AdminLayout/></AuthRouteProtected>}>
               <Route index element={<Dashboard/>}/>
               <Route path="admin-blog" element={<Blogs/>}/>
+              <Route path="admin-profile" element={<AdminProfile/>}/>
             </Route>
 
 

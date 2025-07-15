@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Home, Settings, LogOut, Notebook, X } from 'lucide-react';
+import { Home, Settings, LogOut, Notebook, X, UserRoundPen } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -47,18 +47,27 @@ const AdminSidebar = () => {
                 </div>
 
                 <nav className="p-4 space-y-5 text-sm">
+
                     <Link to={"/admin"} className="flex items-center gap-3 text-gray-700 hover:text-blue-600">
                         <Home size={20} /> Dashboard
                     </Link>
+
                     <Link to={'/admin/admin-blog'} className="flex items-center gap-3 text-gray-700 hover:text-blue-600">
                         <Notebook size={20} /> Blogs
                     </Link>
+
+                    <Link to={'/admin/admin-profile'} className="flex items-center gap-3 text-gray-700 hover:text-blue-600">
+                        <UserRoundPen size={20} /> Profile
+                    </Link>
+
                     <Link className="flex items-center gap-3 text-gray-700 hover:text-blue-600">
                         <Settings size={20} /> Settings
                     </Link>
+
                     <Link to={'/logout'} className="flex items-center gap-3 text-gray-700 hover:text-blue-600">
                         <LogOut size={20} /> Logout
                     </Link>
+
                 </nav>
             </motion.aside>
         </>

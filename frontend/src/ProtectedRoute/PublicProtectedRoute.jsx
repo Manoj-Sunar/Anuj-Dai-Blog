@@ -14,7 +14,7 @@ const PublicProtectedRoute = ({ children }) => {
 
 
     if (token && authUser) {
-        return <Navigate to={"/"} replace />
+        return <Navigate to={"/*"} replace />
     }
 
 
